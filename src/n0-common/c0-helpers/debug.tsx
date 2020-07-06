@@ -1,13 +1,13 @@
 import React from "react";
 
-const dev = true;
+const isDevVersion = true;
 
 export const log = (value: string) => {
-    if (dev) console.log(value)
+    if (isDevVersion) console.log(value)
 };
 
-export const ForTest: React.FC<{ t: string }> = ({t}) => {
-    if (dev)
+export const ForTest: React.FC<{ t?: string }> = ({t}) => {
+    if (isDevVersion)
         return <div style={{display: "none"}}>{t}</div>;
     else
         return null;
